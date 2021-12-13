@@ -1,0 +1,55 @@
+from mongoengine import *
+
+class AtmHolderRegister(Document):
+	firstName = StringField(max_length=100)
+	lastName = StringField(max_length=100)
+	emailId = StringField(max_length=50)
+	registerNumber = IntField(max_length=20)
+	otp = IntField(max_length=10)
+	link = StringField(max_length=250)
+	status = IntField(default=1)
+	createdOn = DateTimeField()
+	fullName = StringField(max_length=50)
+	surName = StringField(max_length=50)
+	fatherName = StringField(max_length=100)
+	motherName = StringField(max_length=100)
+	mobileNumber = StringField()
+	alternatePhone = StringField()
+	birthday = StringField()
+	gender = StringField()
+	alternateEmail = StringField()
+	aadharCard = StringField()
+	panCard = StringField()
+	aadharCardNumber = StringField()
+	panCardNumber = StringField()
+	photo = StringField()
+	signature = StringField()
+	houseNumber = StringField()
+	villageName = StringField()
+	cityTown = StringField()
+	mandalName = StringField()
+	districtName = StringField()
+	stateName = StringField()
+	pinCode = StringField()
+	countryName = StringField()
+	# registerdOn = DateTimeField()
+	digit1 = StringField()
+	digit2 = StringField()
+	digit3 = StringField()
+	digit4 = StringField()
+	cvv = StringField()
+	pinNumber = StringField()
+	validDate = StringField()
+
+
+
+
+class AdminRegister(Document):
+	userName = StringField()
+	email = StringField()
+	password = StringField()
+	image = StringField()
+	createdOn = DateTimeField()
+	status = IntField(default=0)
+
+

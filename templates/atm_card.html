@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ATM Card Design</title>
+	
+	<!-- <link rel="stylesheet" type="text/css" href="static/css/style.css"> -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	
+
+</head>
+<body>
+	<form action="" method="">
+	<div class="container">
+		<div class="card">
+			<div class="card-inner">
+				<div class="front">
+					<!-- <img src="card_img/images/map.png" class="map-img"> -->
+					<img src="{{url_for('static', filename='card_img/images/map.png')}}" class="map-img">
+					<div class="row">
+						<!-- <img src="card_img/images/chip.png" width="60px"> -->
+						<img src="{{url_for('static', filename='card_img/images/chip.png')}}" width="60px">
+						<!-- <img src="card_img/images/visa.png" width="80px"> -->
+						<img src="{{url_for('static', filename='card_img/images/visa.png')}}" width="80px">
+					</div>
+					<div class="row card-no">
+						<p>{{final_data.digit1}}</p>
+						<p>{{final_data.digit2}}</p>
+						<p>{{final_data.digit3}}</p>
+						<p>{{final_data.digit4}}</p>
+					</div>
+					<div class="row card-holder">
+						<p>CARD HOLDER</p>
+						<p>VALID TILL</p>
+					</div>
+
+					<div class="row name">
+						<p>{{final_data.holderName}}</p>
+						<p>{{final_data.validDate}}</p>
+					</div>
+				</div>
+
+
+				<div class="back">
+					<!-- <img src="card_img/images/map.png" class="map-img"> -->
+					<img src="{{url_for('static', filename='card_img/images/map.png')}}" class="map-img">
+					<div class="bar"></div>
+					<div class="row card-cvv">
+						<div>
+							<!-- <img src="card_img/images/pattern.png"> -->
+							<img src="{{url_for('static', filename='card_img/images/pattern.png')}}" >
+						</div>
+						<p>{{final_data.cvv}}</p>
+					</div>
+					<div class="row card-text">
+						<p>This card is the property of Secure Space Pvt Ltd. If found, please return to Secure Space Pvt Ltd.; Card Division;HQ: 4th Floor, Flat no 403. Govind Marvels, Abids, Hyderabad, 500001.</p>
+					</div>
+					<div class="row signature">
+						<p>CUSTOMER SIGNATURE</p>
+						<!-- <img src="card_img/images/visa.png" width="80px"> -->
+						<img src="{{url_for('static', filename='card_img/images/visa.png')}}" width="80px">
+					</div>
+				</div> 
+			</div>
+		</div>
+	</div>
+</form>
+</body>
+</html>
